@@ -353,7 +353,7 @@ strong{
 }
 }
 
-@media only screen and (min-width: 1920px) and (max-width: 200px) {
+@media only screen and (min-width: 1920px) and (max-width: 2000px) {
    
     html{
         height: 100%;
