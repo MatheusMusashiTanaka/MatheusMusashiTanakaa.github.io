@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final</title>
     <link type="text/css" rel="stylesheet" href="Final.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/284/284780.png">
 </head>
 <body>
     <header>
@@ -16,15 +17,52 @@
         
         <section>
             
-            <div class="botoes_sup">
-                <p><b>Nutri</b></p>
-            </div>
+            <button class="botoes_sup">
+                <span><b>Nutri</b></span>
+            </button>
             
-            <div class="botoes_sup_2">
-                <p><b>Home</b></p>
-            </div>
+            <button class="botoes_sup_2">
+                <span><b>Home</b></span>
+            </button>
 
-            <button class="botao"><span><b><u>Login</u></b></span></button>
+            <button class="botao" onclick="abrirlogin()">
+                <span><b><u>Login</u></b></span>
+            </button>
+            
+            <section>
+                <div class="login-popup" id="Meulogin">
+                        
+                        <!--Crio um formulario-->
+                        <form action="/Pagina_de_envio.php" class="login-container">
+                        <h1 class="login-font">Login</h1>
+                               
+                        <!--Crio o input para email-->
+                        <label for="Email"><b class="login-font">Email</b></label>
+                        <input type="text" placeholder="Coloque email" name="Email" required>
+                        
+                        <!--Crio o input para senha-->
+                        <label for="Senha"><b class="login-font">Senha</b></label>
+                        <input type="password" placeholder="Coloque senha" name="Senha" required>
+                        
+                        <!--coloco os dois botes de enviar (submit) e o cancelar(button)-->
+                        <button type="submit" class="btn">Login</button>
+                        <button type="button" class="btn cancelar" onclick="fecharlogin()">Sair</button>
+                        </form>   
+                
+                </div>
+                
+                <!--O scrpit muda o display do formulario (padrao "none") para block-->
+                <script>
+                    function abrirlogin() {
+                         document.getElementById("Meulogin").style.display = "block";
+                            }                           
+
+                    function fecharlogin() {
+                          document.getElementById("Meulogin").style.display = "none";
+                            }
+                </script>
+            
+            </section>
         
         </section>
     
