@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Righteous&display=swap');
 
+
+/*Cor do corpo*/
 body{
-    margin: 0;
-    padding: 0;
+    margin: 0;      /*espaço externo*/
+    padding: 0;     /*espaço interno*/
     background-color: #fff6bd;
 }
 
+/*Retangulo preto*/
 .retangulo{
     background-color: #242222;
     height: 16vh;
@@ -17,18 +20,17 @@ body{
     
 }
 
+/*Botao de login*/
 .botao{
-    border-radius: 40px;
+    border-radius: 40px;    /*Aredonda a borda*/
     background-color: #ffc701;
     border: none;            /* retira a borda padrao */
-    color: blanchedalmond; 
+    color: blanchedalmond; /*cor do texto*/
     text-align: center;
-    font-size: 5vh;
+    font-size: 5vh;         /*tamanho da fonte*/
     padding: 3vh;           /* espaço entre o elemento e sua borda*/
-    width: 13vw;            /* largu */   
-    transition: all 0.5s;    /* tempo transição*/
+    width: 13vw;            /* largura */   
     cursor: pointer;         /* cursor muda */
-    margin: 0.5vh;             /* margem do botao*/
     top: 1vh;                 /* posição vertical do botao*/
     right: 6vw;               /* posiçao horizontal do botao*/
     z-index: 1;                  /* camada */
@@ -36,20 +38,14 @@ body{
 }
 
 .botao span{
-    
-    cursor: pointer;
-    display: inline-block;    /* bloco retangular */
     position: relative;      /* posição depende de outros elementos */
-    transition: 0.5s;
-
+    transition: 0.5s;       /*tempo da transição*/
 }
-
 .botao:hover span{
-    font-size: 5.8vh;         /*tamanho da fonte pos animação (curor em cima)*/
+    font-size: 5.8vh;         /*tamanho da fonte pos animação (cursor em cima)*/
     align-items: center;
   
 }
-
 
 .logo{
     cursor: pointer;
@@ -64,6 +60,64 @@ body{
 .logo:hover {
     animation: tremer 0.5s ;
 }
+
+/*Posição constante do formulario*/
+.login-popup{
+    display: none;
+    position: fixed;
+    top: 5vh;                 
+    right: 15vw;              
+    z-index: 2;
+}
+
+/*style do formulario*/
+.login-container{
+    max-width: 15vw;
+    padding: 3vw;
+    background-color: white;
+    border-radius: 1vw;
+}
+
+/*tamanho e style dos inputs*/
+.login-container input[type=text], .login-container input[type=password]{
+    width: 13vw;
+    padding: 1vw;
+    border: none;
+    background: #f1f1f1;
+}
+
+/*Estilo dos botoes do formulario*/
+.login-container .btn{
+    background-color: #ffc701;
+    color: white;
+    padding: 1vw 2vw;
+    margin-top: 1vw;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 0.5vw;
+    opacity: 0.8;
+    border-radius: 1vw;
+}
+
+/*Estilo especifico para o botao de cancelar*/
+.login-container .cancelar{
+    background-color: red;
+}
+/*diferença de hover nos botoes*/
+.login-container .btn:hover, .botao:hover{
+    opacity: 1;
+}
+
+/*Fonte para os textos do formulario*/
+.login-font{
+    font-size: 4vh;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    color: rgb(0, 0, 0);
+
+}
+
 
 @keyframes tremer {
     0% { transform: rotate(330deg);}
@@ -82,6 +136,24 @@ body{
     margin: 0;
     padding: 0; 
 }
+
+.imag:hover{
+    animation: tremer_1 3.5s infinite;
+}
+@keyframes tremer_1 {
+    0% { transform: rotate(325deg);}
+    20% { transform: rotate(330deg);}
+    30% { transform: rotate(320deg);}
+    40% { transform: rotate(330deg);}
+    50% { transform: rotate(320deg);}
+    60% { transform: rotate(330deg);}
+    70% { transform: rotate(320deg);}
+    80% { transform: rotate(330deg);}
+    90% { transform: rotate(320deg);}
+    95%{transform: rotate(322.5deg);}
+    100% { transform: rotate(325deg);}
+}
+
 
 .retangulo_A{
     background-color:#ffc701;
@@ -119,13 +191,12 @@ body{
     top: 75vh;
     position: absolute;
     border-radius: 55px;
-}
-
-.retangulo_B p{
     margin: 1.5vh;
     text-align: center;
     font-size: 1vw;
 }
+
+
 
 .cadastro{
     cursor: pointer;
@@ -142,16 +213,26 @@ body{
     position: absolute;
     top: 3vh;
     left: 20vw;
-}
-
-.botoes_sup p{
-    margin: 2vh;
-    text-align: center;
+    padding: 0vh;
+    transition: 0.5s;
     color: beige;
     font-size: 1.5vw;
     font-family: 'Righteous', cursive;
-    cursor: pointer;
 }
+.botoes_sup span{
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+.botoes_sup:hover{
+    height: 10vh;
+    font-size: 1.9vw;
+    text-align: center;
+    
+
+}
+
+
 
 .botoes_sup_2{
     background-color: transparent;
@@ -164,17 +245,25 @@ body{
     position: absolute;
     top: 3vh;
     left: 35vw;
-
-}
-
-.botoes_sup_2 p{
-    margin: 2vh;
-    text-align: center;
     color: beige;
     font-size: 1.5vw;
     font-family: 'Righteous', cursive;
-    cursor: pointer;
+    transition: 0.5s;
 }
+
+.botoes_sup_2 span{
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+
+.botoes_sup_2:hover{
+    height: 10vh;
+    font-size: 1.9vw;
+    text-align: center; 
+
+}
+
 
 .texto{
     font-family: "Open Sans";
